@@ -24,7 +24,7 @@ import uuid
 import sys
 
 __version__ = '0.3.9'
-__author__ = 'jthop'
+__author__ = '@jthop'
 
 
 DEFAULT_ACCESS_LOG = '{now} - {ip} - - "{method} {path}" {status_code}'
