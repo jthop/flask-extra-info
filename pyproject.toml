@@ -1,12 +1,13 @@
 [tool.poetry]
 name = "flask-xtra-info"
-version = "0.3.9"
-description = "Flask extension to add info to headers/logs"
+version = "0.3.11"
+description = "Inject extra info into flask headers and logs"
 authors = ["jthop <jh@mode14.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.7"
+Flask = "^1.1.1"
 
 [tool.poetry.dev-dependencies]
 
