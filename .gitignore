@@ -5,3 +5,4 @@ __pycache__
 .backup
 make.sh
 dist
+*.egg-info
