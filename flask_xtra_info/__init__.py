@@ -23,7 +23,7 @@ import time
 import uuid
 import sys
 
-__version__ = '0.3.12'
+__version__ = '0.3.13'
 __author__ = '@jthop'
 
 
@@ -69,7 +69,6 @@ class XtraInfoExtension():
         if self._request_id_generator is None:
             self._request_id_generator = lambda: str(uuid.uuid4())
 
-        self.app = app
         if app is not None:
             self.init_app(app)
 
@@ -82,6 +81,13 @@ class XtraInfoExtension():
 
         :return: None
         """
+
+        self.app = app
+
+        # Save this so we can use it later in the extension
+        if not hasattr(app, "extensions"):
+            app.extensions = {}
+        app.extensions["flask-xtra-info"] = self
 
         # Setup the access-log
         self.access = logging.getLogger("access")
