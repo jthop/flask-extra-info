@@ -19,7 +19,7 @@ Simple Flask Extension to manage several tasks I was repeadidly doing in every p
 After installing the extension you can get started right away
 
     from flask import Flask
-    from xtra_info import XtraInfoExtension
+    from flask_xtra_info import XtraInfoExtension
     
     app = Flask(__name__)
     
@@ -34,7 +34,7 @@ We also suppoort the *app factory* pattern
 
 
     from flask import Flask
-    from xtra_info import XtraInfoExtension
+    from flask_xtra_info import XtraInfoExtension
     
     xtra = XtraInfoExtension()
 
