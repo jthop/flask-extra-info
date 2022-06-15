@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  [![GitHub last commit](https://img.shields.io/github/last-commit/jthop/flask-xtra-info?style=flat)](https://img.shields.io/github/last-commit/jthop/flask-xtra-info)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)  [![GitHub last commit](https://img.shields.io/github/last-commit/jthop/flask-xtra-info?style=flat)](https://img.shields.io/github/last-commit/jthop/flask-xtra-info)
 
 <!-- [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)  -->
 
