@@ -1,3 +1,7 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![GitHub last commit](https://img.shields.io/github/last-commit/jthop/flask-xtra-info?style=flat-square)
+
+<!-- [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)  -->
+
 
 # Flask-Xtra-Info #
 
@@ -32,33 +36,35 @@ After installing the extension you can get started right away
 
 We also suppoort the *app factory* pattern
 
-
     from flask import Flask
     from flask_xtra_info import XtraInfoExtension
     
     xtra = XtraInfoExtension()
 
-    app = create_app('my-config.cfg')
-    xtra.init_app(app)
+    create_app():
+        app = Flask(__name__)
+        xtra.init_app(app)
 
 Once the extension has been instantiated you can find the data in your response headers as well as access it in your logs.
 
 ## Configuration ##
 
+
 The extension is configured via Flask's built-in config object, app.config.  If unfamiliar with Flask's app.config, you can read more at: 
-<https://flask.palletsprojects.com/en/2.0.x/api/?highlight=app%20config#configuration>
+<https://flask.palletsprojects.com/>
 
-- **XTRA_GEN_REQUEST_ID** - Should the extension generate request ids? **true**
-- **XTRA_GEN_INSTANCE_ID** - Should the extension generate an instance id? **true**
-- **XTRA_TIME_RESPONSE** - Should the extension time the response? **true**
-- **XTRA_CREATE_ACCESSLOG** - Should the extension automatically generate access-log style log entries? **true**
-- **XTRA_ACCESSLOG_FMT** - Change the access-log format.  
-    - **'{now} - {ip} - - "{method} {path}" {status_code}'** 
-    - *In addition you can include request_id, instance_id and response_time.*
-
-- **XTRA_REQUEST_ID_HEADER** - Header to use for request-id. **X-Request-Id**
-- **XTRA_INSTANCE_ID_HEADER** - Header to use for instance-id. **X-Instance-Id**
-- **XTRA_RESPONSE_TIME_HEADER** - Header to use for the response time. **X-Response-Time**
+| Variable | Default | Type | Description |
+| --- | --- | --- | --- |
+| XTRA_GEN_REQUEST_ID | `True` | Boolean | Should the extension generate request ids |
+| XTRA_GEN_INSTANCE_ID | `True` | Boolean | Should the extension generate an instance id |
+| XTRA_TIME_RESPONSE | `True` | Boolean | Should the extension time the response |
+| XTRA_CREATE_ACCESSLOG | `True` | Boolean | Should the extension automatically generate access-log style logs |
+| XTRA_INSERT_VERSION | `True` | Boolean | Should the extension insert the app version in the header |
+| XTRA_ACCESSLOG_FMT |  | [^1] | Header | In addition you can include request_id, instance_id and response_time. |
+| XTRA_REQUEST_ID_HEADER | `X-Request-Id` | String | Header to use for request-id |
+| XTRA_INSTANCE_ID_HEADER | `X-Instance-Id` | String | Header to use for instance-id |
+| XTRA_RESPONSE_TIME_HEADER | `X-Response-Time` | String | Header to use for the response time |
+| XTRA_VERSION_HEADER | `X-App-Version` | String | Header to use for the app version |
 
 
 ## Log Filter ##
@@ -99,3 +105,5 @@ The 3 variables available to you in your log formatting will be:
 - instance_id
 - response_time
 
+
+[^1]: '{now} - {ip} - - "{method} {path}" {status_code}'
