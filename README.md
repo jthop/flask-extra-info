@@ -60,7 +60,7 @@ The extension is configured via Flask's built-in config object, app.config.  If 
 | XTRA_TIME_RESPONSE | `True` | Boolean | Should the extension time the response |
 | XTRA_CREATE_ACCESSLOG | `True` | Boolean | Should the extension automatically generate access-log style logs |
 | XTRA_INSERT_VERSION | `True` | Boolean | Should the extension insert the app version in the header |
-| XTRA_ACCESSLOG_FMT |  | [^1] | Header | In addition you can include request_id, instance_id and response_time. |
+| XTRA_ACCESSLOG_FMT | [^1] | String | In addition you can include request_id, instance_id and response_time. |
 | XTRA_REQUEST_ID_HEADER | `X-Request-Id` | String | Header to use for request-id |
 | XTRA_INSTANCE_ID_HEADER | `X-Instance-Id` | String | Header to use for instance-id |
 | XTRA_RESPONSE_TIME_HEADER | `X-Response-Time` | String | Header to use for the response time |
